@@ -77,3 +77,12 @@ jobs:
       with:
         name: Built Executable
         path: Chatter/bin/Release/net10.0/win-x64/publish/Chatter.exe
+
+    # Do the whole release stuff
+    - name: Release
+      run: |
+        gh release create rel${{github.run_number}} Chatter/bin/Release/net10.0/win-x64/publish/Chatter.exe `
+          --fail-on-no-commits `
+          --latest `
+          --notes "This is automatically generated, so there's no text here yet..." `
+          --title "Release #${{github.run_number}}"
