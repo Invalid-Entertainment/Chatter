@@ -81,3 +81,5 @@ jobs:
           --latest `
           --notes "This is automatically generated, so there's no text here yet..." `
           --title "Release #${{github.run_number}}"
+      env:
+        GH_TOKEN: ${{ github.token }}
