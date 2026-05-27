@@ -1,4 +1,5 @@
-﻿Console.WriteLine(ReleaseChecker.GetLatestRelease());
+﻿Console.WriteLine($"My Version:\t{Generated.REV}");
+Console.WriteLine($"Latest Version:\t{ReleaseChecker.GetLatestRelease()}");
 Console.ReadLine();
 
 class ReleaseChecker
